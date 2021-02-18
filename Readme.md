@@ -14,7 +14,7 @@ Given node and npm is available in the machine, run the following commands
 - `git clone https://github.com/ajeetchaulagain/graphql-basics.git`
 - `cd graphql-basics`
 - `npm i`
-- `npm run start` - to run the development server. You can view the Graphql Playground running on http://localhost:4000/ from where you can test the API endpoints
+- `npm run start` - to run the development server. You can view the Graphql Playground running on http://localhost:4000/ from where you can test the graphql API.
 
 ## Note
 
