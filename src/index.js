@@ -18,10 +18,14 @@ const posts = [
   {
     id: "1",
     title: "GraphQL  Getting Started",
+    body: "This is advance GraphQL Course",
+    author: "2",
   },
   {
     id: "2",
     title: "NodeJS  Getting Started",
+    body: "This is advance NodeJS Course",
+    author: "1",
   },
 ];
 
@@ -68,6 +72,11 @@ const resolvers = {
     },
     posts() {
       return posts;
+    },
+  },
+  Post: {
+    author(parent, args, ctx, info) {
+      return users.find((user) => user.id === parent.author);
     },
   },
 };
