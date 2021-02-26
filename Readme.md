@@ -1,6 +1,6 @@
 ## GraphQL Basics
 
-This project is created to demonstrate the graphql concept with Node.
+This project is created to demonstrate the graphql concept with Node. Basic API is created in this project
 
 ## Tools and Libraries used
 
