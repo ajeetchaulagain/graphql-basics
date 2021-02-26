@@ -14,12 +14,23 @@ const users = [
   },
 ];
 
+const posts = [
+  {
+    id: "1",
+    title: "GraphQL  Getting Started",
+  },
+  {
+    id: "2",
+    title: "NodeJS  Getting Started",
+  },
+];
+
 // Type Definition (schema)
 const typeDefs = `
     type Query {
        users(query:String):[User!]!
        me:User!
-       post:Post!
+       posts:[Post!]!
     }
     type User{
        id:ID!
@@ -27,13 +38,13 @@ const typeDefs = `
        email:String!
        age:Int 
     }
-    type Post{
+    type Post {
       id:ID!
       title:String!
       body:String!
       published:Boolean!
+      author:User!
     }
-
 `;
 
 // Resolvers - Set of functions
@@ -55,13 +66,8 @@ const resolvers = {
         email: "ajeet@gmail.com",
       };
     },
-    post() {
-      return {
-        id: "1212",
-        title: "First Post",
-        body: "Post body",
-        published: true,
-      };
+    posts() {
+      return posts;
     },
   },
 };
